@@ -14,12 +14,12 @@ Route::get('/user', function (Request $request) {
 
 // Route::apiResource('subscriptions', SubscriptionController::class);
 
-// Route::apiResource('services', ServiceController::class);
-// Route::patch("/services/{service}/activate", [
-//     ServiceController::class, 
-//     "activate"
-// ]);
-// Route::patch("/services/{service}/deactivate", [
-//     ServiceController::class, 
-//     "deactivate"
-// ]);
+Route::apiResource('services', ServiceController::class);
+Route::patch("/services/{service}/activate", [
+    ServiceController::class, 
+    "activate"
+]);
+Route::patch("/services/{service}/deactivate", [
+    ServiceController::class, 
+    "deactivate"
+]);
