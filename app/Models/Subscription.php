@@ -14,11 +14,21 @@ use Illuminate\Database\Eloquent\Model;
 ])]
 class Subscription extends Model
 {
-    protected function casts():array
+    protected function casts(): array
     {
         return [
-            "start_date" => "date",
-            "end_date" => "date",
+            'start_date' => 'date',
+            'end_date' => 'date',
         ];
+    }
+
+    public function customer()
+    {
+        return $this->belongsTo(Customer::class);
+    }
+
+    public function service()
+    {
+        return $this->belongsTo(Service::class);
     }
 }
