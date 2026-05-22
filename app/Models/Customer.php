@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Subscription;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Model;
 
@@ -14,10 +15,10 @@ use Illuminate\Database\Eloquent\Model;
 ])]
 class Customer extends Model
 {
-    protected function casts():array
+    protected function casts(): array
     {
         return [
-            "status" => "boolean",
+            'status' => 'boolean',
         ];
     }
 
