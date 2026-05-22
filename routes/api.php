@@ -12,7 +12,7 @@ Route::get('/user', function (Request $request) {
 
 Route::apiResource('customers', CustomerController::class);
 
-// Route::apiResource('subscriptions', SubscriptionController::class);
+Route::apiResource('subscriptions', SubscriptionController::class);
 
 Route::apiResource('services', ServiceController::class);
 Route::patch("/services/{service}/activate", [
