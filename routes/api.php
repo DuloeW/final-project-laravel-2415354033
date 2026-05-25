@@ -10,9 +10,9 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-// Route::apiResource('customers', CustomerController::class);
+Route::apiResource('customers', CustomerController::class);
 
-// Route::apiResource('subscriptions', SubscriptionController::class);
+Route::apiResource('subscriptions', SubscriptionController::class);
 
 Route::apiResource('services', ServiceController::class);
 Route::patch("/services/{service}/activate", [
